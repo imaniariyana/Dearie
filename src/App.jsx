@@ -5,9 +5,12 @@ import Dashboard from "./components/Dashboard.jsx";
 
 function App() {
   const [currentScreen, setCurrentScreen] = React.useState("welcome");
-  const [userName, setUserName] = React.useState("");
+  const [userName, setUserName] = React.useState(
+    () => localStorage.getItem("nameInput") || "",
+  );
 
   function handleContinue(name) {
+    localStorage.setItem("nameInput", name);
     setUserName(name);
     setCurrentScreen("dashboard");
   }
