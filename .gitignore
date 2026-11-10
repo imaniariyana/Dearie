@@ -2,3 +2,8 @@ node_modules/
 dist/
 .env
 .env.local
+# Local SQLite databases
+*.db
+*.db-journal
+*.db-shm
+*.db-wal

@@ -1,3 +1,5 @@
+import MoodTracker from "./MoodTracker";
+
 function Dashboard({ userName }) {
   return (
     <main className="dashboard">
@@ -10,17 +12,7 @@ function Dashboard({ userName }) {
         <h2>Hi, {userName}! ♡</h2>
         <p>Be gentle to yourself</p>
       </div>
-
-      <div className="wellness">
-        <h2>How are you feeling today?</h2>
-        <div className="mood-options">
-          <button>😔 Low</button>
-          <button>😢 Sad</button>
-          <button>😡 Angry</button>
-          <button>😊 Happy</button>
-          <button>🥰 Loved</button>
-        </div>
-      </div>
+      <MoodTracker />
     </main>
   );
 }
